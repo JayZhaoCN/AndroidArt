@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
     public void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
 
-        Log.i("coderJay", "onSaveInstanceState");
+        LogUtilKt.i("onSaveInstanceState");
         outState.putString("test_key", "LALALA");
 
     }
@@ -36,12 +36,12 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
-        Log.i("coderJay", "onRestoreInstanceState: " + savedInstanceState.getString("test_key"));
+        LogUtilKt.i("onRestoreInstanceState: " + savedInstanceState.getString("test_key"));
     }
 
     @Override
     public void onConfigurationChanged(Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
-        Log.i("coderJay", "onConfigurationChanged");
+        LogUtilKt.i("onConfigurationChanged");
     }
 }
