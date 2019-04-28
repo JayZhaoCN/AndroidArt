@@ -1,7 +1,9 @@
 package com.example.zhaoj.androidart;
 
+import android.content.ComponentName;
 import android.content.Intent;
 import android.content.res.Configuration;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -17,9 +19,12 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.test_tv).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, MainActivity.class);
-                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                getApplicationContext().startActivity(intent);
+                Intent intent = new Intent();
+                //通过设置Action隐式打开Activity
+                intent.setAction("SHARE_ACTION");
+                //使用setComponent的方式打开Activity（显式）
+                //intent.setComponent(new ComponentName("com.xiaomi.hm.health", "com.xiaomi.hm.health.device.PairCCBActivity"));
+                startActivity(intent);
             }
         });
     }
