@@ -27,8 +27,26 @@
                 <action android:name="SHARE_ACTION" />
                 <!--若想支持隐式打开Activity，则必须设置默认category-->
                 <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.test" />
             </intent-filter>
 
+        </activity>
+
+        <activity android:name=".Share2Activity" android:label="fuckBaidu(推荐)">
+            <intent-filter>
+                <action android:name="SHARE_ACTION"/>
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.test1" />
+                <!--<data android:scheme="asdasdasd"/>-->
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".Share3Activity" android:label="fuckBaidu(推荐)">
+            <intent-filter>
+                <action android:name="SHARE3_ACTION"/>
+                <category android:name="android.intent.category.DEFAULT" />
+                <data  android:mimeType="text/plain"/>
+            </intent-filter>
         </activity>
 
     </application>
