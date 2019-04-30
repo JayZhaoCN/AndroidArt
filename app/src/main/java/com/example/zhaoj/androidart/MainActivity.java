@@ -33,7 +33,11 @@ public class MainActivity extends AppCompatActivity {
                 //intent.setAction("SHARE_ACTION");
                 //intent.setData(Uri.parse("asdasdasd://www.tapd.cn/"));
                 intent.setAction("SHARE3_ACTION");
+                intent.setType("text/plain");
+                //可通过URI检查
                 intent.setDataAndType(Uri.parse("content://abc"), "text/plain");
+                //不可通过URI检查
+                //intent.setDataAndType(Uri.parse("http://abc"), "text/plain");
 
                 startActivity(intent);
             }
